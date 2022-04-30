@@ -27,4 +27,8 @@ class Veiculo extends Model
     {
         return $this->hasMany(Image::class);
     }
+    public function opcionais()
+    {
+        return $this->hasMany(Opcional::class);
+    }
 }

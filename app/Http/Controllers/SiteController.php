@@ -16,7 +16,7 @@ class SiteController extends Controller
 
     public function carDetail($id)
     {
-        $veiculo = Veiculo::with('imagens')->find($id);
+        $veiculo = Veiculo::with(['imagens', 'opcionais'])->find($id);
         return view('site.car-detail', get_defined_vars());
     }
 }
