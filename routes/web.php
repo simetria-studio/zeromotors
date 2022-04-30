@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PainelController;
+use App\Http\Controllers\SiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,5 +32,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('info', [CarController::class, 'info']);
 
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
-
 });
+
+Route::get('/', [SiteController::class, 'index'])->name('site');
+Route::get('/car/detail/{id}', [SiteController::class, 'carDetail'])->name('site.car.detail');

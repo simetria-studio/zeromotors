@@ -22,4 +22,9 @@ class Veiculo extends Model
         'preco',
         'video',
     ];
+
+    public function imagens()
+    {
+        return $this->hasMany(Image::class);
+    }
 }
