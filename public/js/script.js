@@ -1,11 +1,13 @@
+
 $(document).ready(function () {
+
     $.ajax({
         url: "marcas",
         success: function (data) {
             // console.log(data.nome);
-            $.each(data, (key, value) => {
-                $("#marca").append(`<option id="marcaCodigo" data-val="${value.codigo}" value="${value.nome}">${value.nome}</option>`);
 
+            $.each(data, (key, value) => {
+                $("#marca").append(`<option data-val="${value.codigo}" value="${value.nome}">${value.nome}</option>`);
             });
         }
     });
@@ -114,4 +116,21 @@ $(document).on('change', '.add-foto', function () {
 });
 $(document).on('click', '.btn-remove-foto', function () {
     $(this).parent().remove();
+});
+
+$('#km').mask('999999999');
+$('#potencia').mask('999999999');
+$("#preco").maskMoney({
+    decimal: ",",
+    thousands: "."
+});
+$(document).ready(function () {
+    $('#summernote').summernote();
+});
+$(document).ready(function () {
+    var editor = $("#summernote");
+    editor.summernote();
+$('#enviar').on('click', function(){
+ $('#text-code').val(editor.summernote('code'));
+})
 });

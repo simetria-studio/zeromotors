@@ -14,10 +14,12 @@
     <!-- overlayScrollbars -->
     <link rel="stylesheet" href="{{ asset('painel/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
     <!-- Theme style -->
-
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('painel/plugins/dropzone/min/dropzone.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('painel/dist/css/adminlte.min.css') }}">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/css/bootstrap-select.min.css">
     <link rel="stylesheet" href="{{ asset('css/main.min.css') }}">
 </head>
 
@@ -222,7 +224,6 @@
     <!-- Bootstrap -->
     <script src="{{ asset('painel/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- overlayScrollbars -->
-    <script src="{{ asset('painel//plugins/select2/js/select2.full.min.js') }}"></script>
     <script src="{{ asset('painel/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('painel/plugins/dropzone/min/dropzone.min.js') }}"></script>
@@ -236,13 +237,30 @@
     <!-- ChartJS -->
     <script src="{{ asset('painel/plugins/chart.js/Chart.min.js') }}"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.14/dist/js/bootstrap-select.min.js"></script>
     <!-- AdminLTE for demo purposes -->
     <script src="{{ asset('painel/dist/js/demo.js') }}"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote.min.js"></script>
     <script src="{{ asset('painel/dist/js/pages/dashboard2.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    @if (Session::has('success'))
+        <script type="text/javascript">
+            Swal.fire({
+                title: 'Sucesso!',
+                icon: 'success',
+                text: "{{ Session::get('success') }}",
+                timer: 5000,
+                type: 'success'
+            }).then((result) => {
+                // Reload the Page
+                location.reload();
+            });
+        </script>
+    @endif
     @yield('js')
 </body>
 

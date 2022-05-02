@@ -32,46 +32,111 @@
             </div>
             <div class="col-md-6">
                 <div class="detail">
-                    <div>
+                    <div class="text-uppercase">
                         <h3>{{ $veiculo->marca }} - {{ $veiculo->modelo }}</h3>
                     </div>
                     <div>
                         <h3>{{ 'R$ ' . number_format($veiculo->preco, 2, ',', '.') }} </h3>
                     </div>
-                    <div>
-                        <div>
-                            <p>{{ $veiculo->ano }}</p>
+                    <div class="detail-grid">
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/calendar.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>ANO</h5>
+                                <p>{{ $veiculo->ano }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>{{ $veiculo->cor }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/palette.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>COR</h5>
+                                <p>{{ $veiculo->cor }}</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p>{{ $veiculo->km }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/speedometer.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>KM</h5>
+                                <p>{{ $veiculo->km }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>{{ $veiculo->status }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/status.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>STATUS</h5>
+                                <p>{{ $veiculo->status }}</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>{{ $veiculo->cambio }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/manual-transmission.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>CÂMBIO</h5>
+                                <p>{{ $veiculo->cambio }}</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p>{{ $veiculo->portas }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/car.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>PORTAS</h5>
+                                <p>{{ $veiculo->portas }} PORTAS</p>
+                            </div>
+
                         </div>
-                        <div>
-                            <p>{{ $veiculo->potencia }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/engine.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>POTÊNCIA</h5>
+                                <p>{{ $veiculo->potencia }} HP</p>
+                            </div>
                         </div>
-                        <div>
-                            <p>{{ $veiculo->combustivel }}</p>
+                        <div class="detail-flex">
+                            <div>
+                                <span><img src="{{ asset('site/img/icons/gas-station.png') }}" alt=""></span>
+                            </div>
+                            <div>
+                                <h5>COMBUSTÍVEL</h5>
+                                <p>{{ $veiculo->combustivel }}</p>
+                            </div>
+
                         </div>
+                    </div>
+                    <div class="ficha">
+                        <button class="btn btn-secondary">APROVE SUA FICHA</button>
                     </div>
                 </div>
             </div>
         </div>
         <div>
+            <div class="my-4 text-uppercase">
+                <h3>Mais informações</h3>
+            </div>
+            {!! $veiculo->info !!}
+        </div>
+        <div class="my-4 text-uppercase">
+            <h3>Opcional</h3>
+        </div>
+        <div class="opcional">
             @foreach ($veiculo->opcionais as $item)
-                <p>{{$item->opcional}}</p>
+                <div class="iten-opcional">
+                    <p> <i class="fas fa-check-circle"></i> {{ $item->opcional }}</p>
+                </div>
             @endforeach
-
         </div>
     </div>
 @endsection

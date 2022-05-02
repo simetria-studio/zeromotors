@@ -21,6 +21,7 @@ class Veiculo extends Model
         'status',
         'preco',
         'video',
+        'info'
     ];
 
     public function imagens()

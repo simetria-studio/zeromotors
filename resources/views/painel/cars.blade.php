@@ -35,7 +35,7 @@
                                     <td>{{ $veiculo->id }}</td>
                                     <td>{{ $veiculo->marca }}</td>
                                     <td>{{ $veiculo->modelo }}</td>
-                                    <td>{{ $veiculo->preco }}</td>
+                                    <td>{{ 'R$ ' . number_format($veiculo->preco, 2, ',', '.') }}</td>
                                     <td>Disponivel</td>
                                     <td>
                                         <div class="d-flex">

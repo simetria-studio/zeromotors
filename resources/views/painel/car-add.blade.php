@@ -14,6 +14,15 @@
                         </div>
                     </div>
                 </div>
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <form action="{{ route('car.store') }}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body tab p-0">
@@ -22,7 +31,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label>Marca</label>
-                                        <select class="form-control" id="marca" name="marca">
+                                        <select class="form-control" id="marca" name="marca" data-live-search="true">
                                             <option>Selecione a marca</option>
                                         </select>
 
@@ -48,7 +57,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Preço da FIPE</label>
-                                        <input type="text" class="form-control" name="fipe" id="fipe">
+                                        <input type="text" class="form-control" name="fipe" id="fipe" disabled>
                                     </div>
                                 </div>
 
@@ -81,7 +90,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">KM</label>
-                                        <input type="text" class="form-control" name="km">
+                                        <input type="text" class="form-control" id="km" name="km">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -105,7 +114,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Potencia</label>
-                                        <input type="text" class="form-control" name="potencia">
+                                        <input type="text" class="form-control" id="potencia" name="potencia">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -151,15 +160,32 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="exampleInputPassword1">Preço de Venda</label>
-                                        <input type="text" class="form-control" name="preco">
+                                        <input type="text" class="form-control" id="preco" name="preco">
                                     </div>
                                 </div>
                             </div>
                             @component('components.opcionais', ['opt' => $opt])
                             @endcomponent
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card card-default">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Mais informações</h3>
+                                        </div>
+                                        <div class="card-body">
+                                            <div id="summernote"></div>
+                                        </div>
+                                        <div class="d-none">
+                                            <textarea name="info" id="text-code" cols="30" rows="10"></textarea>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-md-2 my-4 mx-auto">
-                                    <button type="submit" class="btn btn-light">Salvar</button>
+                                    <button type="submit" id="enviar" class="btn btn-light">Salvar</button>
                                 </div>
                             </div>
                         </div>

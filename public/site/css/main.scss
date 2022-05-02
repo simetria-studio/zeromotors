@@ -361,3 +361,69 @@ header {
         object-fit: cover;
     }
 }
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.detail{
+    h3{
+        font-size: 1.5em;
+    }
+}
+.detail-flex {
+    display: flex;
+    align-items: center;
+    margin: 1em 0;
+    img{
+        width: 40px;
+    }
+
+    h5 {
+        line-height: 1;
+        margin: 0;
+        padding: 3px 8px;
+        font-weight: 400 !important;
+    }
+
+    p {
+        line-height: 1;
+        margin: 0;
+        padding: 3px 8px;
+        font-size: 1.3em;
+        color:#ff0000ad;
+        font-weight: 700;
+        text-transform: uppercase;
+        }
+
+    i {
+        font-size: 2em;
+
+    }
+}
+.ficha{
+    width: 100%;
+    button{
+        width: 100% !important;
+        background-color: #ff0000;
+        border: none;
+        padding: 1.5em 0;
+        font-size: 1em;
+    }
+}
+
+.opcional{
+    display: grid;
+    margin: 2em 0;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    i{
+        color: #ff0000;
+    }
+    p{
+        font-size: 1.2em;
+    }
+    .iten-opcional{
+        margin: 0 ;
+    }
+}

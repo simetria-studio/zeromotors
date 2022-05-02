@@ -27,6 +27,7 @@ class CreateVeiculosTable extends Migration
             $table->string('status')->nullable();
             $table->string('preco')->nullable();
             $table->string('video')->nullable();
+            $table->text('info')->nullable();
             $table->timestamps();
         });
     }

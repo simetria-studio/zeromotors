@@ -69,11 +69,22 @@ class CarController extends Controller
      */
     public function store(Request $request)
     {
+        $subjectVal = "Gasolina";
+        $subjectVal2 = "Diesel";
+        $subjectVal3 = "Álcool";
+
+        $validated = $request->validate([
+            'preco' => 'required',
+            'cor' => 'required',
+            'km' => 'required',
+            'foto' => 'required',
+
+        ]);
 
         $veiculo = Veiculo::create([
             'marca' => $request->input('marca'),
             'modelo' => $request->input('modelo'),
-            'ano' => $request->input('ano'),
+            'ano' => str_replace([$subjectVal, $subjectVal2, $subjectVal3], '', $request->input('ano')),
             'km' => $request->input('km'),
             'cor' => $request->input('cor'),
             'cambio' => $request->input('cambio'),
@@ -81,7 +92,8 @@ class CarController extends Controller
             'portas' => $request->input('portas'),
             'combustivel' => $request->input('combustivel'),
             'status' => $request->input('status'),
-            'preco' => $request->input('preco'),
+            'preco' => str_replace(['.', ','], ['', '.'], $request->input('preco')),
+            'info' => $request->input('info'),
             // 'video' => $request->input('video'),
         ]);
         if (!empty($request->foto && $request->foto !== null)) {
@@ -94,7 +106,7 @@ class CarController extends Controller
             }
         }
         if (!empty($request->opcionais && $request->opcionais !== null)) {
-            foreach($request->opcionais as $opcionais){
+            foreach ($request->opcionais as $opcionais) {
                 Opcional::create([
                     'veiculo_id' => $veiculo->id,
                     'opcional' => $opcionais
@@ -102,7 +114,7 @@ class CarController extends Controller
             }
         }
 
-        return redirect()->back();
+        return redirect()->route('cars')->with('success', 'Veiculo cadastrado com sucesso!');
     }
 
     /**
