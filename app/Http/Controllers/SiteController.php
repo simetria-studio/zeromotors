@@ -34,8 +34,5 @@ class SiteController extends Controller
             return response()->json([get_defined_vars()]);
         }
     }
-    public function filterReturn()
-    {
-        return view('site.filter-model');
-    }
+
 }

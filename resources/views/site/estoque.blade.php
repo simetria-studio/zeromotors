@@ -1,6 +1,6 @@
 @extends('layouts.site')
 @section('content')
-    <div class="container">
+    <div class="container my-5">
         <div class="product-grid">
             @foreach ($veiculos as $veiculo)
                 <div>
