@@ -15,18 +15,18 @@ $(".btn-close").click(function () {
 
 
 /* product left start */
-if($(".product-left").length){
+if ($(".product-left").length) {
     var productSlider = new Swiper('.product-slider', {
         spaceBetween: 0,
         centeredSlides: false,
-        loop:true,
+        loop: true,
         direction: 'horizontal',
         loopedSlides: 5,
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        resizeObserver:true,
+        resizeObserver: true,
     });
     var productThumbs = new Swiper('.product-thumbs', {
         spaceBetween: 0,
@@ -45,3 +45,23 @@ if($(".product-left").length){
 
 }
 /* 	product left end */
+var clearSearch;
+
+$('#search').on('blur keyup', function () {
+    search = $(this).val();
+    // clearTimeout(clearSearch);
+    // if(search.length > 3){
+    //     clearSearch = setTimeout(() => {
+    //         window.location.href = 'filtroModelo?search='+search
+    //     },1500 );
+    // }
+    $.ajax({
+        url: "filtroModelo",
+        data: { search: search },
+        success: function (data) {
+            console.log(data)
+            $('.product-grid').html(data[0].viewRender);
+
+        }
+    });
+});

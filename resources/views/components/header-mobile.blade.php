@@ -23,7 +23,7 @@
         <div class="menu-body">
             <ul class="nav flex-column align-content-center">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">ESTOQUE</a>
+                    <a class="nav-link" href="{{ route('site.estoque') }}">ESTOQUE</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">VENDA SEU CARRO</a>

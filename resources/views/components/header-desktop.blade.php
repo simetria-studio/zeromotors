@@ -9,7 +9,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">ESTOQUE</a>
+                                <a class="nav-link" href="{{ route('site.estoque') }}">ESTOQUE</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">VENDA SEU CARRO</a>
@@ -39,6 +39,6 @@
     </div>
     <div class="search">
         <div class="form-group">
-            <input type="search" class="form-control" placeholder="PESQUISAR...">
+            <input type="search" class="form-control" id="search" placeholder="PESQUISAR...">
         </div>
     </div>

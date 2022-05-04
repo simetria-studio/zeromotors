@@ -36,3 +36,6 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
 Route::get('/', [SiteController::class, 'index'])->name('site');
 Route::get('/car/detail/{id}', [SiteController::class, 'carDetail'])->name('site.car.detail');
+Route::get('estoque', [SiteController::class, 'estoque'])->name('site.estoque');
+Route::get('filtroModelo', [SiteController::class, 'filterModel']);
+Route::get('filtroModel', [SiteController::class, 'filterReturn'])->name('site.filter');
