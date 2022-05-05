@@ -34,6 +34,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
 });
 
+Route::get('marcas', [CarController::class, 'create'])->name('car.marca');
+Route::get('modelos', [CarController::class, 'modelos']);
+
+
 Route::get('/', [SiteController::class, 'index'])->name('site');
 Route::get('/car/detail/{id}', [SiteController::class, 'carDetail'])->name('site.car.detail');
 Route::get('estoque', [SiteController::class, 'estoque'])->name('site.estoque');
