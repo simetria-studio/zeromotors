@@ -40,124 +40,148 @@
     <div class="container">
         <div class="marcas">
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/bmw.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=bmw') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/bmw.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>BMW</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>BMW</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/jeep.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Jeep') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/jeep.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>JEEP</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>JEEP</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/hyundai.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Hyundai') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/hyundai.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>HYUNDAI</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>HYUNDAI</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/toyota.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Toyota') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/toyota.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>TOYOTA</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>TOYOTA</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/ford.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Ford') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/ford.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>FORD</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>FORD</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/honda.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Honda') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/honda.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>HONDA</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>HONDA</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site//img/fiat.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Fiat') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site//img/fiat.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>FIAT</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>FIAT</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site//img/mercedez.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Mercedes-Benz') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site//img/mercedez.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>MERCEDES-BENZ</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>MERCEDES-BENZ</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/renault.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Renault') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/renault.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>RENAULT</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>RENAULT</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/volkswagen.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=VW - VolksWagen') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/volkswagen.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>VOLKSWAGEN</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>VOLKSWAGEN</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/chevrolet.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=GM - Chevrolet') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/chevrolet.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>CHEVROLET</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>CHEVROLET</p>
-                    </div>
-                </div>
+                </a>
             </div>
             <div class="marca1">
-                <div class="d-flex flex-column align-items-center p-3 itens">
-                    <div>
-                        <img src="{{ asset('site/img/mitsubish.svg') }}" alt="">
+                <a href="{{ url('filtroMarca?search=Mitsubishi') }}">
+                    <div class="d-flex flex-column align-items-center p-3 itens">
+                        <div>
+                            <img src="{{ asset('site/img/mitsubish.svg') }}" alt="">
+                        </div>
+                        <div>
+                            <p>MITSUBISHI</p>
+                        </div>
                     </div>
-                    <div>
-                        <p>MITSUBISHI</p>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -173,8 +197,7 @@
                             <div class="product-img">
                                 @foreach ($veiculo->imagens as $item)
                                     @if ($loop->first)
-                                        <img src="{{ asset($item->path) }}"
-                                            alt="" />
+                                        <img src="{{ asset($item->path) }}" alt="" />
                                     @endif
                                 @endforeach
                             </div>

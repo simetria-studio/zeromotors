@@ -90,6 +90,11 @@ header {
     grid-template-rows: auto auto;
     justify-content: center;
 
+    a {
+        text-decoration: none;
+        color: #151414;
+    }
+
     .marca1 {
         width: 150px;
         height: 150px;
@@ -366,16 +371,19 @@ header {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.detail{
-    h3{
+
+.detail {
+    h3 {
         font-size: 1.5em;
     }
 }
+
 .detail-flex {
     display: flex;
     align-items: center;
     margin: 1em 0;
-    img{
+
+    img {
         width: 30px;
     }
 
@@ -391,19 +399,21 @@ header {
         margin: 0;
         padding: 3px 8px;
         font-size: 1.2em;
-        color:#ff0000ad;
+        color: #ff0000ad;
         font-weight: 700;
         text-transform: uppercase;
-        }
+    }
 
     i {
         font-size: 2em;
 
     }
 }
-.ficha{
+
+.ficha {
     width: 100%;
-    button{
+
+    button {
         width: 100% !important;
         background-color: #ff0000;
         border: none;
@@ -412,18 +422,21 @@ header {
     }
 }
 
-.opcional{
+.opcional {
     display: grid;
     margin: 2em 0;
     grid-template-columns: 1fr 1fr;
     width: 80%;
-    i{
+
+    i {
         color: #ff0000;
     }
-    p{
+
+    p {
         font-size: 1.2em;
     }
-    .iten-opcional{
-        margin: 0 ;
+
+    .iten-opcional {
+        margin: 0;
     }
 }

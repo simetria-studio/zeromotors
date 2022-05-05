@@ -38,4 +38,5 @@ Route::get('/', [SiteController::class, 'index'])->name('site');
 Route::get('/car/detail/{id}', [SiteController::class, 'carDetail'])->name('site.car.detail');
 Route::get('estoque', [SiteController::class, 'estoque'])->name('site.estoque');
 Route::get('filtroModelo', [SiteController::class, 'filterModel']);
+Route::get('filtroMarca', [SiteController::class, 'filterMarca'])->name('filtro.marca');
 

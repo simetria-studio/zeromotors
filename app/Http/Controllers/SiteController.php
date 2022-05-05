@@ -34,5 +34,11 @@ class SiteController extends Controller
             return response()->json([get_defined_vars()]);
         }
     }
+    public function filterMarca(Request $request)
+    {
+        $veiculos = Veiculo::where('marca', 'LIKE', '%' . $request->search . "%")->get();
+
+        return view('site.filter-marca', get_defined_vars());
+    }
 
 }
