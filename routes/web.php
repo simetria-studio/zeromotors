@@ -3,6 +3,7 @@
 use App\Http\Controllers\CarController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PainelController;
+use App\Http\Controllers\ReciveController;
 use App\Http\Controllers\SiteController;
 
 /*
@@ -45,3 +46,5 @@ Route::get('filtroModelo', [SiteController::class, 'filterModel']);
 Route::get('filtroMarca', [SiteController::class, 'filterMarca'])->name('filtro.marca');
 
 Route::get('/venda-seu-veiculo',[SiteController::class, 'vendaSeuVeiculo'])->name('site.venda');
+Route::post('/venda-seu-veiculo/store', [ReciveController::class, 'store'])->name('recive.store');
+Route::get('/thanks', [ReciveController::class, 'create'])->name('thanks');

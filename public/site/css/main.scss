@@ -440,3 +440,27 @@ header {
         margin: 0;
     }
 }
+
+.btn-remove-foto {
+    background-color: rgb(223, 27, 27);
+}
+
+.btn-add-foto {
+    background-color: #38ff0e;
+}
+
+.preview-foto {
+    width: 100%;
+    height: 100%;
+
+    // .foto {
+    //     width: 175px;
+    //     height: 175px;
+    // }
+
+    img {
+        width: 175px;
+        height: 175px;
+        object-fit: cover;
+    }
+}

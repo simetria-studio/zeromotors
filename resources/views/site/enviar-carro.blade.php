@@ -9,18 +9,19 @@
             <h5>DADOS DO VEÍCULO</h5>
         </div>
         <div class="mb-5">
-            <form action="">
+            <form action="{{ route('recive.store') }}" method="post" enctype="multipart/form-data">
+                @csrf
                 <div class="d-flex justify-content-center">
                     <div class="col-md-8">
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Marca</label>
-                            <select class="form-control" id="marca">
+                            <select class="form-control" name="marca" id="marca">
                                 <option>Selecione</option>
                             </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlSelect1">Modelo</label>
-                            <select class="form-control" id="modelo">
+                            <select class="form-control" name="modelo" id="modelo">
                                 <option>Selecione</option>
 
                             </select>
@@ -128,62 +129,62 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Quilometragem</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="km" id="exampleFormControlInput1"
                                 placeholder="KM">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Cor</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="cor" id="exampleFormControlInput1"
                                 placeholder="Coloque a cor do veículo">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Opcionais</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" name="opcionais" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="text-center">
                             <h5>DADOS PESSOAIS</h5>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nome</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="nome" id="exampleFormControlInput1"
                                 placeholder="Nome do dono">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Email</label>
-                            <input type="email" class="form-control" id="exampleFormControlInput1"
+                            <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
                                 placeholder="E-mail para contato">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">CEP</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="cep" id="exampleFormControlInput1"
                                 placeholder="Digite seu CEP">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Endereço</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="endereco" id="exampleFormControlInput1"
                                 placeholder="Rua e Numero">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Cidade</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="cidade" id="exampleFormControlInput1"
                                 placeholder="Cidade ">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Estado</label>
-                            <input type="text" class="form-control" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="estado" id="exampleFormControlInput1"
                                 placeholder="Estado">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Mensagem</label>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="text-center">
                             <h5>FOTOS DO VEÍCULO</h5>
                         </div>
-                        <div class="card">
+                        <div class="card p-2">
                             <div class="form-group col-12 mb-2 required" data-check="foto">
                                 <div class="row">
-                                    <div class="col-6 col-md-3 mb-2">
+                                    <div class="col-6 col-md-3 mb-2 preview-foto">
                                         <button type="button" class="btn btn-custom-1 btn-add-foto mb-3">+</button>
                                         <input type="file" name="foto[]" class="d-none add-foto">
                                         <div class="foto"></div>
@@ -192,7 +193,7 @@
                             </div>
                         </div>
                         <div class="my-3">
-                            <button class="btn btn-success">ENVIAR</button>
+                            <button type="submit" class="btn btn-success">ENVIAR</button>
                         </div>
                     </div>
 
