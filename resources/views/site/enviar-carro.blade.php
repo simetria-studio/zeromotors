@@ -156,22 +156,22 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">CEP</label>
-                            <input type="text" class="form-control" name="cep" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="cep" id="buscar"
                                 placeholder="Digite seu CEP">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Endereço</label>
-                            <input type="text" class="form-control" name="endereco" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="endereco" id="endereco"
                                 placeholder="Rua e Numero">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Cidade</label>
-                            <input type="text" class="form-control" name="cidade" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="cidade" id="cidade"
                                 placeholder="Cidade ">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Estado</label>
-                            <input type="text" class="form-control" name="estado" id="exampleFormControlInput1"
+                            <input type="text" class="form-control" name="estado" id="estado"
                                 placeholder="Estado">
                         </div>
                         <div class="form-group">

@@ -48,3 +48,4 @@ Route::get('filtroMarca', [SiteController::class, 'filterMarca'])->name('filtro.
 Route::get('/venda-seu-veiculo',[SiteController::class, 'vendaSeuVeiculo'])->name('site.venda');
 Route::post('/venda-seu-veiculo/store', [ReciveController::class, 'store'])->name('recive.store');
 Route::get('/thanks', [ReciveController::class, 'create'])->name('thanks');
+Route::get('/buscarCep', [ReciveController::class, 'buscaCep'])->name('buscar.cep');

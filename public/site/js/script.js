@@ -183,3 +183,21 @@ $(document).ready(function () {
         });
     });
 });
+$('#buscar').mask('99999-999');
+$('#buscar').on('blur keyup', function () {
+    $value = $(this).val();
+    $.ajax({
+        type: 'get',
+        url: 'buscarCep',
+        data: {
+            'search': $value
+        },
+        success: function (data) {
+            console.log(data);
+            $('#endereco').val(data.street);
+            $('#bairro').val(data.district);
+            $('#cidade').val(data.city);
+            $('#estado').val(data.uf);
+        }
+    });
+})

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\ReciveCar;
 use App\Models\ReciveFoto;
 use Illuminate\Http\Request;
+use FlyingLuscas\Correios\Client;
 
 class ReciveController extends Controller
 {
@@ -110,5 +111,14 @@ class ReciveController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function buscaCep(Request $request)
+    {
+        $correios = new Client;
+
+        $cep = $correios->zipcode()->find($request->search);
+
+        return $cep;
     }
 }
