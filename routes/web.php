@@ -32,6 +32,8 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('ano', [CarController::class, 'ano']);
     Route::get('info', [CarController::class, 'info']);
 
+    Route::get('cars-site', [PainelController::class, 'siteCars'])->name('site.cars');
+
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
 });
 

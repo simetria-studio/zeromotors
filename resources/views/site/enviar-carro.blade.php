@@ -150,6 +150,11 @@
                                 placeholder="Nome do dono">
                         </div>
                         <div class="form-group">
+                            <label for="exampleFormControlInput1">Whatsapp</label>
+                            <input type="text" class="form-control" name="whatsapp" id="whatsapp"
+                                placeholder="Numero com DDD">
+                        </div>
+                        <div class="form-group">
                             <label for="exampleFormControlInput1">Email</label>
                             <input type="email" class="form-control" name="email" id="exampleFormControlInput1"
                                 placeholder="E-mail para contato">

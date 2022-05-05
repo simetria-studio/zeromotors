@@ -184,6 +184,7 @@ $(document).ready(function () {
     });
 });
 $('#buscar').mask('99999-999');
+$('#whatsapp').mask('(99) 99999-9999');
 $('#buscar').on('blur keyup', function () {
     $value = $(this).val();
     $.ajax({

@@ -45,6 +45,7 @@ class ReciveController extends Controller
             'cor' => $request->input('cor'),
             'opcionais' => $request->input('opcionais'),
             'nome' => $request->input('nome'),
+            'whatsapp' => $request->input('whatsapp'),
             'email' => $request->input('email'),
             'cep' => $request->input('cep'),
             'endereco' => $request->input('endereco'),

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ReciveCar;
 use App\Models\Veiculo;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,12 @@ class PainelController extends Controller
     {
         $opt = $this->opcionaisList();
         return view('painel.car-add', get_defined_vars());
+    }
+
+    public function siteCars()
+    {
+        $cars = ReciveCar::get();
+        return view('painel.site-cars', get_defined_vars());
     }
 
     public function opcionaisList()

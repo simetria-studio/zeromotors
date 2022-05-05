@@ -17,6 +17,7 @@ class ReciveCar extends Model
         'opcionais',
         'nome',
         'email',
+        'whatsapp',
         'cep',
         'endereco',
         'cidade',

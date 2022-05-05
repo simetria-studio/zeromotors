@@ -23,6 +23,7 @@ class CreateReciveCarsTable extends Migration
             $table->text('opcionais')->nullable();
             $table->string('nome')->nullable();
             $table->string('email')->nullable();
+            $table->string('whatsapp')->nullable();
             $table->string('cep')->nullable();
             $table->string('endereco')->nullable();
             $table->string('cidade')->nullable();
