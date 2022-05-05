@@ -40,3 +40,4 @@ Route::get('estoque', [SiteController::class, 'estoque'])->name('site.estoque');
 Route::get('filtroModelo', [SiteController::class, 'filterModel']);
 Route::get('filtroMarca', [SiteController::class, 'filterMarca'])->name('filtro.marca');
 
+Route::get('/venda-seu-veiculo',[SiteController::class, 'vendaSeuVeiculo'])->name('site.venda');

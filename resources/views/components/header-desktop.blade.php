@@ -12,7 +12,7 @@
                                 <a class="nav-link" href="{{ route('site.estoque') }}">ESTOQUE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">VENDA SEU CARRO</a>
+                                <a class="nav-link" href="{{ route('site.venda') }}">VENDA SEU CARRO</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">FINANCIE</a>

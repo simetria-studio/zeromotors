@@ -41,4 +41,9 @@ class SiteController extends Controller
         return view('site.filter-marca', get_defined_vars());
     }
 
+    public function vendaSeuVeiculo()
+    {
+        return view('site.enviar-carro');
+    }
+
 }
