@@ -33,6 +33,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('info', [CarController::class, 'info']);
 
     Route::get('cars-site', [PainelController::class, 'siteCars'])->name('site.cars');
+    Route::get('cars-site/show/{id}', [PainelController::class, 'carsSiteShow'])->name('site.cars.show');
 
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
 });

@@ -35,7 +35,7 @@
                                     <td>
                                         <div class="d-flex">
                                             <div>
-                                                <button class="btn btn-info">Ver</button>
+                                               <a href="{{ route('site.cars.show', $car->id) }}"> <button class="btn btn-info">Ver</button></a>
                                             </div>
                                         </div>
                                     </td>

@@ -29,6 +29,13 @@ class PainelController extends Controller
         return view('painel.site-cars', get_defined_vars());
     }
 
+    public function carsSiteShow($id)
+    {
+        $car = ReciveCar::with('imagens')->find($id);
+
+        return view('painel.cars_site_show', get_defined_vars());
+    }
+
     public function opcionaisList()
     {
         $optarr = [

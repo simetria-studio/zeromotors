@@ -24,4 +24,9 @@ class ReciveCar extends Model
         'estado',
         'mensagem',
     ];
+
+    public function imagens()
+    {
+        return $this->hasMany(ReciveFoto::class, 'recived_car_id');
+    }
 }
