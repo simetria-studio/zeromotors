@@ -46,4 +46,9 @@ class SiteController extends Controller
         return view('site.enviar-carro');
     }
 
+    public function financiamento()
+    {
+        return view('site.financiamento');
+    }
+
 }

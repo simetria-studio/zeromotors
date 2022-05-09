@@ -2,14 +2,13 @@
 @section('content')
     <div class="container">
         <div class="text-center mt-5">
-            <h3>PRECISA VENDER SEU CARRO?</h3>
-            <p>ENTÃO DEIXE ELE NA ZERO 41 MOTORS QUE NÓS FAZEMOS ISSO PARA VOCÊ!</p>
+            <h3>APROVEITE SEU FINANCIAMENTO ONLINE!</h3>
         </div>
         <div class="text-center">
             <h5>DADOS DO VEÍCULO</h5>
         </div>
         <div class="mb-5">
-            <form action="{{ route('recive.store') }}" method="post" enctype="multipart/form-data">
+            <form action="{{ route('financiamento.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
                 <div class="d-flex justify-content-center">
                     <div class="col-md-8">
@@ -23,7 +22,6 @@
                             <label for="exampleFormControlSelect1">Modelo</label>
                             <select class="form-control" name="modelo" id="modelo">
                                 <option>Selecione</option>
-
                             </select>
                         </div>
                         <div class="form-group">
@@ -142,12 +140,119 @@
                             <textarea class="form-control" name="opcionais" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="text-center">
+                            <h5>DADOS DO FINANCIAMENTO</h5>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Valor do financiamento</label>
+                            <input type="text" class="form-control" name="valor_financiamento" id="exampleFormControlInput1"
+                                placeholder="Valor total do financiamento">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Entrada</label>
+                            <input type="text" class="form-control" name="entrada_financiamento" id="exampleFormControlInput1"
+                                placeholder="Valor da entrada">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Parcelas</label>
+                            <input type="text" class="form-control" name="parcela_financiamento" id="exampleFormControlInput1"
+                                placeholder="Numero do parcelas">
+                        </div>
+
+                        <div class="text-center">
+                            <h5>DADOS PROFISSIONAIS</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Regime</label>
+                            <select class="form-control" name="regime">
+                                <option value="clt" selected>CLT</option>
+                                <option value="Autônomo">Autônomo</option>
+                                <option value="Profissional Liberal">Profissional Liberal</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Cargo / Função</label>
+                            <input type="text" class="form-control" name="cargo" id="exampleFormControlInput1"
+                                placeholder="Função exercida">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Renda</label>
+                            <input type="text" class="form-control" name="nome" id="exampleFormControlInput1"
+                                placeholder="Renda mensal">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Tempo de emprego</label>
+                            <input type="text" class="form-control" name="renda" id="exampleFormControlInput1"
+                                placeholder="Tempo de emprego">
+                        </div>
+                        <div class="text-center">
+                            <h5>REFERÊNCIA BANCÁRIA</h5>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Banco</label>
+                            <input type="text" class="form-control" name="banco" id="exampleFormControlInput1"
+                                placeholder="Banco">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Agência</label>
+                            <input type="text" class="form-control" name="agencia" id="exampleFormControlInput1"
+                                placeholder="Numero da agência">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Tempo de conta</label>
+                            <input type="text" class="form-control" name="tempo_conta" id="exampleFormControlInput1"
+                                placeholder="Tempo que possuí essa conta">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Conta</label>
+                            <input type="text" class="form-control" name="conta" id="exampleFormControlInput1"
+                                placeholder="Numero da conta com digito">
+                        </div>
+                        <div class="text-center">
                             <h5>DADOS PESSOAIS</h5>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Nome</label>
                             <input type="text" class="form-control" name="nome" id="exampleFormControlInput1"
                                 placeholder="Nome do dono">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">CPF</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf"
+                                placeholder="Numero do cpf">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">RG</label>
+                            <input type="text" class="form-control" name="rg" id="rg"
+                                placeholder="Numero do rg">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Data de Emissão do RG</label>
+                            <input type="text" class="form-control" name="data_rg" id="data_rg"
+                                placeholder="exemplo 12/12/2012">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nome do pai</label>
+                            <input type="text" class="form-control" name="nome_pai" id="exampleFormControlInput1"
+                                placeholder="Nome do paie">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nome da mãe</label>
+                            <input type="text" class="form-control" name="nome_mae" id="exampleFormControlInput1"
+                                placeholder="Nome da mãe">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Naturalidade</label>
+                            <input type="text" class="form-control" name="naturalidade" id="exampleFormControlInput1"
+                                placeholder="Sua naturalidade">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Possuí CNH?</label>
+                            <select class="form-control" name="cnh">
+                                <option value="Sim" selected>Sim</option>
+                                <option value="Não">Não</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Whatsapp</label>
@@ -161,8 +266,7 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">CEP</label>
-                            <input type="text" class="form-control" name="cep" id="buscar"
-                                placeholder="Digite seu CEP">
+                            <input type="text" class="form-control" name="cep" id="buscar" placeholder="Digite seu CEP">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Endereço</label>
@@ -171,31 +275,34 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Cidade</label>
-                            <input type="text" class="form-control" name="cidade" id="cidade"
-                                placeholder="Cidade ">
+                            <input type="text" class="form-control" name="cidade" id="cidade" placeholder="Cidade ">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlInput1">Estado</label>
-                            <input type="text" class="form-control" name="estado" id="estado"
-                                placeholder="Estado">
+                            <input type="text" class="form-control" name="estado" id="estado" placeholder="Estado">
                         </div>
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Mensagem</label>
                             <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
                         <div class="text-center">
-                            <h5>FOTOS DO VEÍCULO</h5>
+                            <h5>REFERÊNCIA PESSOAL</h5>
                         </div>
-                        <div class="card p-2">
-                            <div class="form-group col-12 mb-2 required" data-check="foto">
-                                <div class="row">
-                                    <div class="col-6 col-md-3 mb-2 preview-foto">
-                                        <button type="button" class="btn btn-custom-1 btn-add-foto mb-3">+</button>
-                                        <input type="file" name="foto[]" class="d-none add-foto">
-                                        <div class="foto"></div>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nome (1)</label>
+                            <input type="text" class="form-control" name="nome_1"  placeholder="Nome da sua referência">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Celular (1)</label>
+                            <input type="text" class="form-control" name="celular_1"  placeholder="Celular da sua referência" id="whatsapp1">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Nome (2)</label>
+                            <input type="text" class="form-control" name="nome_2"  placeholder="Nome da sua referência">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlInput1">Celular (2)</label>
+                            <input type="text" class="form-control" name="celular_2"  placeholder="Celular da sua referência" id="whatsapp2">
                         </div>
                         <div class="my-3">
                             <button type="submit" class="btn btn-success">ENVIAR</button>

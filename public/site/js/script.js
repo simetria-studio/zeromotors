@@ -185,6 +185,16 @@ $(document).ready(function () {
 });
 $('#buscar').mask('99999-999');
 $('#whatsapp').mask('(99) 99999-9999');
+$('#whatsapp1').mask('(99) 99999-9999');
+$('#whatsapp2').mask('(99) 99999-9999');
+$('#cpf').mask('999.999.999-47');
+$('#rg').mask('99.999.999-99');
+$('#data_rg').mask('99/99/9999');
+
+
+
+
+
 $('#buscar').on('blur keyup', function () {
     $value = $(this).val();
     $.ajax({

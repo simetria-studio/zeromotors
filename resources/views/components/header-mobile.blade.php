@@ -29,7 +29,7 @@
                     <a class="nav-link" href="{{ route('site.venda') }}">VENDA SEU CARRO</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">FINANCIE</a>
+                    <a class="nav-link" href="{{ route('financiamento') }}">FINANCIE</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">SOBRE</a>
