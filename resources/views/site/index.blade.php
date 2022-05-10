@@ -298,9 +298,9 @@
             <h2>Zero 41 Motors</h2>
             <h5><i class="fas fa-map-marker-alt"></i> Endereço: Rua Marechal Floriano Peixoto, 6825 - Boqueirão - Curitiba
             </h5>
-            <h5><i class="fas fa-envelope"></i> Email: zero41motors@hotmail.com</h5>
-            <h5><i class="fas fa-phone"></i> Telefone: 41 3311-1858</h5>
-            <h5><i class="fab fa-whatsapp"></i> WhatsApp: 41 99753-2000</h5>
+            <h5><i class="fas fa-envelope"></i> Email: {{ getConfigs()->email ?? 'zero41motors@hotmail.com' }}</h5>
+            <h5><i class="fas fa-phone"></i> Telefone: {{ getConfigs()->telefone ?? '41 3311-1858' }}</h5>
+            <h5><i class="fab fa-whatsapp"></i> WhatsApp: {{ getConfigs()->whatsapp ?? '41 99753-2000' }}</h5>
         </div>
     </div>
 @endsection

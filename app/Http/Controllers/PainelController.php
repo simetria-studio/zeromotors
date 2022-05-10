@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Financimento;
 use App\Models\ReciveCar;
+use App\Models\SiteConfig;
 use App\Models\Veiculo;
 use Illuminate\Http\Request;
 
@@ -47,6 +48,34 @@ class PainelController extends Controller
     {
         $financiamento = Financimento::find($id);
         return view('painel.financiamento-ver', get_defined_vars());
+    }
+
+    public function siteConfig()
+    {
+        $configs = SiteConfig::get()->first();
+        return view('painel.configs', get_defined_vars());
+    }
+    public function siteConfigStore(Request $request)
+    {
+        SiteConfig::create([
+            'email' => $request->email,
+            'telefone' => $request->telefone,
+            'whatsapp' => $request->whatsapp,
+        ]);
+
+        return redirect()->back();
+    }
+    public function siteConfigUpdate(Request $request, $id)
+    {
+        $config = SiteConfig::find($id);
+
+        $config->update([
+            'email' => $request->input('email'),
+            'telefone' => $request->input('telefone'),
+            'whatsapp' => $request->input('whatsapp'),
+        ]);
+
+        return redirect()->back();
     }
 
     public function opcionaisList()

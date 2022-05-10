@@ -47,8 +47,8 @@
         <h4>ENTRE EM CONTATO CONOSCO</h4>
     </div>
     <div class="text-center">
-        <p>41 3311-1858</p>
-        <p>41 99753-2000</p>
+        <p> {{ getConfigs()->telefone ?? '41 3311-1858' }}</p>
+        <p>{{ getConfigs()->whatsapp ?? '41 99753-2000' }}</p>
     </div>
     <div class="container mb-5">
         <div class="row justify-content-center">

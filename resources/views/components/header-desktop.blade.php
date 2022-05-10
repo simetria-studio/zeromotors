@@ -29,7 +29,7 @@
             </div>
             <div class="whastapp">
                 <div>
-                    <h4>41 99753-2000</h4>
+                    <h4>{{ getConfigs()->whatsapp ?? '41 99753-2000' }}</h4>
                 </div>
                 <div>
                     <img src="{{ asset('site/img/whatsapp.svg') }}" alt="">

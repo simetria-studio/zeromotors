@@ -49,8 +49,8 @@
                     <div class="center">
                         <h5>
                             CONSIGNAÇÃO E COMPRA<br />
-                            41 3311-1858 41<br />
-                            99753-2000
+                            {{ getConfigs()->telefone ?? ' 41 3311-1858 41' }}<br />
+                            {{ getConfigs()->whatsapp ?? ' 41 99753-2000' }}
                         </h5>
                     </div>
                     <div>

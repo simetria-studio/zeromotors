@@ -166,6 +166,15 @@
                                 </p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{ route('painel.site.config') }}" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>
+                                    Site Config
+                                    {{-- <span class="right badge badge-danger">New</span> --}}
+                                </p>
+                            </a>
+                        </li>
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->

@@ -40,6 +40,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::get('financiamentos', [PainelController::class, 'financiamentos'])->name('financiamentos');
     Route::get('financiamento-show/{id}', [PainelController::class, 'financiamento'])->name('finaciamento.show');
+
+    Route::get('site-config', [PainelController::class, 'siteConfig'])->name('painel.site.config');
+    Route::post('site-config-post', [PainelController::class, 'siteConfigStore'])->name('painel.store.config');
+    Route::post('site-config-update/{id}', [PainelController::class, 'siteConfigUpdate'])->name('painel.update.config');
 });
 
 Route::get('marcas', [CarController::class, 'create'])->name('car.marca');
