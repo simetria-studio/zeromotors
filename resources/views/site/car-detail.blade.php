@@ -117,7 +117,7 @@
                         </div>
                     </div>
                     <div class="ficha">
-                        <button class="btn btn-secondary">APROVE SUA FICHA</button>
+                        <a href="{{ route('financiamento') }}"> <button class="btn btn-secondary">APROVE SUA FICHA</button></a>
                     </div>
                 </div>
             </div>
