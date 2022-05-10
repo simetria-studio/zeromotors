@@ -42,6 +42,33 @@ class SiteController extends Controller
         return view('site.filter-marca', get_defined_vars());
     }
 
+    public function filterPrice(Request $request)
+    {
+        if ($request->ajax()) {
+
+            if ($request->filter == 'menor-preco') {
+                $veiculos = Veiculo::orderBy('preco', 'asc')->get();
+                $viewRender = view('site.filter-model', get_defined_vars())->render();
+                return response()->json([get_defined_vars()]);
+            }
+            if ($request->filter == 'maior-preco') {
+                $veiculos = Veiculo::orderBy('preco', 'desc')->get();
+                $viewRender = view('site.filter-model', get_defined_vars())->render();
+                return response()->json([get_defined_vars()]);
+            }
+            if ($request->filter == 'maior-ano') {
+                $veiculos = Veiculo::orderBy('ano', 'desc')->get();
+                $viewRender = view('site.filter-model', get_defined_vars())->render();
+                return response()->json([get_defined_vars()]);
+            }
+            if ($request->filter == 'menor-ano') {
+                $veiculos = Veiculo::orderBy('ano', 'asc')->get();
+                $viewRender = view('site.filter-model', get_defined_vars())->render();
+                return response()->json([get_defined_vars()]);
+            }
+        }
+    }
+
     public function vendaSeuVeiculo()
     {
         return view('site.enviar-carro');
@@ -62,7 +89,7 @@ class SiteController extends Controller
 
         $email = $request->email;
         $nome = $request->nome;
-        $data = ['email' =>  $request->email, 'nome' => $request->nome,'assunto' => $request->assunto, 'celular' => $request->celular, 'mensagem' => $request->mensagem];
+        $data = ['email' =>  $request->email, 'nome' => $request->nome, 'assunto' => $request->assunto, 'celular' => $request->celular, 'mensagem' => $request->mensagem];
 
         Mail::send('emails.contato', $data, function ($m) use ($email, $nome) {
             $m->from($email, $nome);

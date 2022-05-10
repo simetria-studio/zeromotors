@@ -1,6 +1,21 @@
 @extends('layouts.site')
 @section('content')
     <div class="container my-5">
+        <div>
+            <div class="row justify-content-center">
+                <div class="filter col-md-4">
+                    <div class="form-group">
+                        <select class="form-control" id="orderby">
+                            <option>Ordenar por</option>
+                            <option value="menor-preco">Menor Preço</option>
+                            <option value="maior-preco">Maior Preço</option>
+                            <option value="maior-ano">Maior Ano</option>
+                            <option value="menor-ano">Menor Ano</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="product-grid">
             @foreach ($veiculos as $veiculo)
                 <div>

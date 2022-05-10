@@ -64,3 +64,5 @@ Route::post('financimento-store', [FinanciamentoController::class, 'store'])->na
 
 Route::get('contato', [SiteController::class, 'contato'])->name('contato');
 Route::post('contato-send', [SiteController::class, 'contatoSend'])->name('contato.send');
+
+Route::get('priceFilter', [SiteController::class, 'filterPrice']);

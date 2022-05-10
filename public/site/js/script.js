@@ -212,3 +212,19 @@ $('#buscar').on('blur keyup', function () {
         }
     });
 })
+
+$('#orderby').on('change', function () {
+    var value = $(this).val();
+    console.log(value);
+    $.ajax({
+        type: 'get',
+        url: 'priceFilter',
+        data: {
+            'filter': value
+        },
+        success: function (data) {
+            console.log(data);
+            $('.product-grid').html(data[0].viewRender);
+        }
+    });
+})
