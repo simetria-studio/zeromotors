@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Veiculo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SiteController extends Controller
 {
@@ -51,4 +52,24 @@ class SiteController extends Controller
         return view('site.financiamento');
     }
 
+    public function contato()
+    {
+        return view('site.contato');
+    }
+
+    public function contatoSend(Request $request)
+    {
+
+        $email = $request->email;
+        $nome = $request->nome;
+        $data = ['email' =>  $request->email, 'nome' => $request->nome,'assunto' => $request->assunto, 'celular' => $request->celular, 'mensagem' => $request->mensagem];
+
+        Mail::send('emails.contato', $data, function ($m) use ($email, $nome) {
+            $m->from($email, $nome);
+
+            $m->to('zero41motors@hotmail.com', 'Contato')->subject('Contato site');
+        });
+
+        return redirect()->back();
+    }
 }

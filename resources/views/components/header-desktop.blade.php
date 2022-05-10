@@ -21,7 +21,7 @@
                                 <a class="nav-link" href="#">SOBRE</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">CONTATO</a>
+                                <a class="nav-link" href="{{ route('contato') }}">CONTATO</a>
                             </li>
                         </ul>
                     </div>

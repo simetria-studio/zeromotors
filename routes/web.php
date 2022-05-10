@@ -61,3 +61,6 @@ Route::get('/thanks', [ReciveController::class, 'create'])->name('thanks');
 Route::get('/buscarCep', [ReciveController::class, 'buscaCep'])->name('buscar.cep');
 
 Route::post('financimento-store', [FinanciamentoController::class, 'store'])->name('financiamento.store');
+
+Route::get('contato', [SiteController::class, 'contato'])->name('contato');
+Route::post('contato-send', [SiteController::class, 'contatoSend'])->name('contato.send');

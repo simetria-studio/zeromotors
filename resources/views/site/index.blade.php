@@ -225,7 +225,7 @@
                     </div>
                 </div>
                 <div class="com-bottom text-center">
-                    <button class="btn btn-danger">ENVIE SEU VEÍCULO</button>
+                    <a href="{{ route('site.venda') }}"> <button class="btn btn-danger">ENVIE SEU VEÍCULO</button></a>
                 </div>
             </div>
             <div class="com-content">
@@ -239,7 +239,7 @@
                     </div>
                 </div>
                 <div class="com-bottom text-center">
-                    <button class="btn btn-danger">FAÇA UMA SIMULAÇAO</button>
+                    <a href="{{ route('financiamento') }}"><button class="btn btn-danger">FAÇA UMA SIMULAÇAO</button></a>
                 </div>
             </div>
         </div>
