@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BannerController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\FinanciamentoController;
 use Illuminate\Support\Facades\Route;
@@ -44,6 +45,12 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('site-config', [PainelController::class, 'siteConfig'])->name('painel.site.config');
     Route::post('site-config-post', [PainelController::class, 'siteConfigStore'])->name('painel.store.config');
     Route::post('site-config-update/{id}', [PainelController::class, 'siteConfigUpdate'])->name('painel.update.config');
+
+    Route::get('banner', [PainelController::class, 'banners'])->name('banners');
+
+    Route::post('banner-store', [BannerController::class, 'store'])->name('banner.store');
+    Route::post('banner-status/{id}', [BannerController::class, 'status'])->name('banner.status');
+    Route::any('banner-delete/{id}', [BannerController::class, 'destroy'])->name('banner.delete');
 });
 
 Route::get('marcas', [CarController::class, 'create'])->name('car.marca');

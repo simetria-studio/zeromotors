@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\Veiculo;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -11,7 +12,7 @@ class SiteController extends Controller
     public function index()
     {
         $veiculos = Veiculo::with('imagens')->get();
-
+        $banners = Banner::where('status', 1)->get();
         return view('site.index', get_defined_vars());
     }
 

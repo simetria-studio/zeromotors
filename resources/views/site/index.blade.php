@@ -8,20 +8,13 @@
 
             </ol>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://dicas.olx.com.br/wp-content/uploads/2021/04/tipos-de-carros-capa.png"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-
+                @foreach ($banners as $banner)
+                    <div class="carousel-item @if ($loop->first) active @endif">
+                        <img src="{{ asset($banner->path) ?? 'https://dicas.olx.com.br/wp-content/uploads/2021/04/tipos-de-carros-capa.png' }}" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                        </div>
                     </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="https://dicas.olx.com.br/wp-content/uploads/2021/01/carros-mais-vendidos-2021.png"
-                        class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-
-                    </div>
-                </div>
+                @endforeach
 
             </div>
             <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">

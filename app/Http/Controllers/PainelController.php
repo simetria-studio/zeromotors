@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Financimento;
+use App\Models\Banner;
+use App\Models\Veiculo;
 use App\Models\ReciveCar;
 use App\Models\SiteConfig;
-use App\Models\Veiculo;
+use App\Models\Financimento;
 use Illuminate\Http\Request;
 
 class PainelController extends Controller
@@ -36,6 +37,12 @@ class PainelController extends Controller
         $car = ReciveCar::with('imagens')->find($id);
 
         return view('painel.cars_site_show', get_defined_vars());
+    }
+
+    public function banners()
+    {
+        $banners = Banner::get();
+        return view('painel.banners', get_defined_vars());
     }
 
     public function financiamentos()
