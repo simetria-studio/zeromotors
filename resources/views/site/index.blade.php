@@ -3,14 +3,16 @@
     <div>
         <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+                @foreach ($banners as $key => $banner)
+                    <li data-target="#carouselExampleCaptions" data-slide-to="{{ $key }}"
+                        class="@if ($loop->first) active @endif"></li>
+                @endforeach
 
             </ol>
             <div class="carousel-inner">
                 @foreach ($banners as $banner)
                     <div class="carousel-item @if ($loop->first) active @endif">
-                        <img src="{{ asset($banner->path) ?? 'https://dicas.olx.com.br/wp-content/uploads/2021/04/tipos-de-carros-capa.png' }}" class="d-block w-100" alt="...">
+                        <img src="{{ url($banner->path) ?? '' }}" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                         </div>
                     </div>
