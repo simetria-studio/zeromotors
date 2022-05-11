@@ -228,3 +228,11 @@ $('#orderby').on('change', function () {
         }
     });
 })
+
+function whatsappUrl() {
+    window.open('https://api.whatsapp.com/send?phone=5541965899856&text=Vim%20pelo%20site', '_blank');
+}
+
+function instagramUrl() {
+    window.open('https://www.instagram.com/zero41motors_curitiba/', '_blank');
+}

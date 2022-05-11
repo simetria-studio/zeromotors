@@ -31,7 +31,7 @@
                 <div>
                     <h4>{{ getConfigs()->whatsapp ?? '41 99753-2000' }}</h4>
                 </div>
-                <div>
+                <div id="whatsappUrl" onclick="whatsappUrl()">
                     <img src="{{ asset('site/img/whatsapp.svg') }}" alt="">
                 </div>
             </div>
