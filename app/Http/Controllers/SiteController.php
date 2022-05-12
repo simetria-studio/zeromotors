@@ -11,7 +11,7 @@ class SiteController extends Controller
 {
     public function index()
     {
-        $veiculos = Veiculo::with('imagens')->get();
+        $veiculos = Veiculo::where('active', 1)->with('imagens')->get();
         $banners = Banner::where('status', 1)->get();
         return view('site.index', get_defined_vars());
     }

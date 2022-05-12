@@ -187,6 +187,16 @@ class CarController extends Controller
         return redirect()->route('cars')->with('success', 'Veiculo cadastrado com sucesso!');
     }
 
+    public function carStatus(Request $request, $id)
+    {
+        // dd($request->all());
+        $car = Veiculo::find($id);
+        $car->active = $request->input('active');
+        $car->save();
+
+        return redirect()->back();
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -195,12 +205,14 @@ class CarController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $car = Veiculo::with('imagens', 'opcionais')->find($id);
+        $car->delete();
+        return redirect()->route('cars')->with('success', 'Veiculo deletado com sucesso!');
     }
 
     public function fotoDelete(Request $request)
     {
-        
+
         if ($request->ajax()) {
             $foto = Image::find($request->value);
             $foto->delete();

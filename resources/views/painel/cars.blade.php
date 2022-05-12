@@ -30,7 +30,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+
                             @foreach ($veiculos as $veiculo)
                                 <tr>
                                     <td>{{ $veiculo->id }}</td>
@@ -41,7 +41,20 @@
                                     <td>
                                         <div class="d-flex">
                                             <div>
-                                                <button class="btn btn-danger">Apagar</button>
+                                                <form action="{{ route('car.status', $veiculo->id) }}" method="post">
+                                                    @csrf
+                                                    @if ($veiculo->active == 1)
+                                                        <input type="hidden" name="active" value="0">
+                                                        <button type="submit" class="btn btn-primary">Desativar</button>
+                                                    @else
+                                                        <input type="hidden" name="active" value="1">
+                                                        <button type="submit" class="btn btn-success">Ativar</button>
+                                                    @endif
+                                                </form>
+                                            </div>
+                                            <div class="mx-2">
+                                                <a href="{{ route('car.delete', $veiculo->id) }}"> <button
+                                                        class="btn btn-danger">Apagar</button></a>
                                             </div>
                                             <div>
                                                 <a href="{{ route('cars.add', $veiculo->id) }}"> <button

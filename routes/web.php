@@ -39,9 +39,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
     Route::post('car/update/{id}', [CarController::class, 'update'])->name('car.update');
-  
+    Route::any('car/delete/{id}', [CarController::class, 'destroy'])->name('car.delete');
 
-    
+
+    Route::post('car/status/{id}', [CarController::class, 'carStatus'])->name('car.status');
 
     Route::get('financiamentos', [PainelController::class, 'financiamentos'])->name('financiamentos');
     Route::get('financiamento-show/{id}', [PainelController::class, 'financiamento'])->name('finaciamento.show');
@@ -67,7 +68,7 @@ Route::get('estoque', [SiteController::class, 'estoque'])->name('site.estoque');
 Route::get('filtroModelo', [SiteController::class, 'filterModel']);
 Route::get('filtroMarca', [SiteController::class, 'filterMarca'])->name('filtro.marca');
 
-Route::get('/venda-seu-veiculo',[SiteController::class, 'vendaSeuVeiculo'])->name('site.venda');
+Route::get('/venda-seu-veiculo', [SiteController::class, 'vendaSeuVeiculo'])->name('site.venda');
 Route::post('/venda-seu-veiculo/store', [ReciveController::class, 'store'])->name('recive.store');
 
 Route::get('financimento', [SiteController::class, 'financiamento'])->name('financiamento');
