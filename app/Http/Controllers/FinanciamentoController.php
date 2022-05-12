@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Financimento;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FinanciamentoController extends Controller
 {
@@ -73,6 +74,53 @@ class FinanciamentoController extends Controller
             'nome_2' => $request->input('nome_2'),
             'celular_2' => $request->input('celular_2'),
         ]);
+
+        $email = $request->email;
+        $nome = $request->nome;
+        $data = [
+            'marca' => $request->input('marca'),
+            'modelo' => $request->input('modelo'),
+            'ano' => $request->input('ano'),
+            'km' => $request->input('km'),
+            'cor' => $request->input('cor'),
+            'opcionais' => $request->input('opcionais'),
+            'valor_financiamento' => $request->input('valor_financiamento'),
+            'entrada_financiamento' => $request->input('entrada_financiamento'),
+            'parcela_financiamento' => $request->input('parcela_financiamento'),
+            'regime' => $request->input('regime'),
+            'cargo' => $request->input('cargo'),
+            'renda' => $request->input('renda'),
+            'tempo_emprego' => $request->input('tempo_emprego'),
+            'banco' => $request->input('banco'),
+            'agencia' => $request->input('agencia'),
+            'tempo_conta' => $request->input('tempo_conta'),
+            'conta' => $request->input('conta'),
+            'nome' => $request->input('nome'),
+            'cpf' => $request->input('cpf'),
+            'rg' => $request->input('rg'),
+            'data_rg' => $request->input('data_rg'),
+            'nome_pai' => $request->input('nome_pai'),
+            'nome_mae' => $request->input('nome_mae'),
+            'naturalidade' => $request->input('naturalidade'),
+            'cnh' => $request->input('cnh'),
+            'whatsapp' => $request->input('whatsapp'),
+            'email' => $request->input('email'),
+            'cep' => $request->input('cep'),
+            'endereco' => $request->input('endereco'),
+            'cidade' => $request->input('cidade'),
+            'estado' => $request->input('estado'),
+            'mensagem' => $request->input('mensagem'),
+            'nome_1' => $request->input('nome_1'),
+            'celular_1' => $request->input('celular_1'),
+            'nome_2' => $request->input('nome_2'),
+            'celular_2' => $request->input('celular_2'),
+        ];
+
+        Mail::send('emails.financiamento', $data, function ($m) use ($email, $nome) {
+            $m->from($email, $nome);
+
+            $m->to('zero41motors@hotmail.com', 'Contato')->subject('Financiamento');
+        });
 
         return redirect()->route('thanks');
     }
