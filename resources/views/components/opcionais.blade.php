@@ -9,13 +9,15 @@
                 <div class="form-group col-12 mb-2 required" data-check="foto">
                     <div class="row">
                         @foreach ($opt as $key => $value)
+
                             <div class="col-md-6">
                                 <div class="custom-control custom-checkbox">
                                     <input class="custom-control-input" type="checkbox" name="opcionais[]"
-                                        id="customCheckbox{{ $key }}" value="{{ $value }}">
+                                        id="customCheckbox{{ $key }}" value="{{ $value }}"   @if(isset($car))  @foreach ($car->opcionais as $item) {{($item->opcional == $value) ? 'checked' : ''}}   @endforeach @endif>
                                     <label for="customCheckbox{{ $key }}" class="custom-control-label">{{ $value }}</label>
                                 </div>
                             </div>
+
                         @endforeach
                     </div>
                 </div>

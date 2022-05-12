@@ -20,9 +20,10 @@ class PainelController extends Controller
         $veiculos = Veiculo::get();
         return view('painel.cars', get_defined_vars());
     }
-    public function carAdd()
+    public function carAdd($id = null)
     {
         $opt = $this->opcionaisList();
+        $car = Veiculo::with(['imagens', 'opcionais'])->find($id);
         return view('painel.car-add', get_defined_vars());
     }
 
@@ -83,6 +84,13 @@ class PainelController extends Controller
         ]);
 
         return redirect()->back();
+    }
+
+    public function carEdit($id)
+    {
+        $car = Veiculo::find($id);
+        $opt = $this->opcionaisList();
+        return view('painel.car_edit', get_defined_vars());
     }
 
     public function opcionaisList()

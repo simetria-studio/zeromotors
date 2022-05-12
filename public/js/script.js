@@ -1,6 +1,10 @@
 
 $(document).ready(function () {
-
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     $.ajax({
         url: "marcas",
         success: function (data) {
@@ -115,6 +119,17 @@ $(document).on('change', '.add-foto', function () {
     }
 });
 $(document).on('click', '.btn-remove-foto', function () {
+
+    var foto = document.querySelector('.fotoVal').value
+    console.log(foto)
+    $.ajax({
+        url: "/del",
+        type: "POST",
+        data: { value: foto, },
+        success: function (data) {
+            console.log(data);
+        }
+    });
     $(this).parent().remove();
 });
 
@@ -130,7 +145,8 @@ $(document).ready(function () {
 $(document).ready(function () {
     var editor = $("#summernote");
     editor.summernote();
-$('#enviar').on('click', function(){
- $('#text-code').val(editor.summernote('code'));
-})
+    $('#enviar').on('click', function () {
+        $('#text-code').val(editor.summernote('code'));
+    })
 });
+

@@ -30,6 +30,7 @@
                             </tr>
                         </thead>
                         <tbody>
+                            
                             @foreach ($veiculos as $veiculo)
                                 <tr>
                                     <td>{{ $veiculo->id }}</td>
@@ -41,6 +42,10 @@
                                         <div class="d-flex">
                                             <div>
                                                 <button class="btn btn-danger">Apagar</button>
+                                            </div>
+                                            <div>
+                                                <a href="{{ route('cars.add', $veiculo->id) }}"> <button
+                                                        class="btn btn-info">Editar</button></a>
                                             </div>
                                         </div>
                                     </td>

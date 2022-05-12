@@ -26,7 +26,7 @@ Route::middleware('auth')->prefix('admin')->group(function () {
 
     Route::get('/', [PainelController::class, 'index'])->name('painel');
     Route::get('cars', [PainelController::class, 'cars'])->name('cars');
-    Route::get('carAdd', [PainelController::class, 'carAdd'])->name('cars.add');
+    Route::get('carAdd/{id?}', [PainelController::class, 'carAdd'])->name('cars.add');
 
     Route::get('marcas', [CarController::class, 'create'])->name('car.marca');
 
@@ -38,6 +38,10 @@ Route::middleware('auth')->prefix('admin')->group(function () {
     Route::get('cars-site/show/{id}', [PainelController::class, 'carsSiteShow'])->name('site.cars.show');
 
     Route::post('car/store', [CarController::class, 'store'])->name('car.store');
+    Route::post('car/update/{id}', [CarController::class, 'update'])->name('car.update');
+  
+
+    
 
     Route::get('financiamentos', [PainelController::class, 'financiamentos'])->name('financiamentos');
     Route::get('financiamento-show/{id}', [PainelController::class, 'financiamento'])->name('finaciamento.show');
@@ -77,3 +81,4 @@ Route::get('contato', [SiteController::class, 'contato'])->name('contato');
 Route::post('contato-send', [SiteController::class, 'contatoSend'])->name('contato.send');
 
 Route::get('priceFilter', [SiteController::class, 'filterPrice']);
+Route::post('del', [CarController::class, 'fotoDelete']);

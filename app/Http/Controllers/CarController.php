@@ -136,7 +136,6 @@ class CarController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -148,7 +147,44 @@ class CarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $veiculo = Veiculo::find($id);
+        $subjectVal = "Gasolina";
+        $subjectVal2 = "Diesel";
+        $subjectVal3 = "Álcool";
+
+
+        $veiculo->update([
+            'km' => $request->input('km'),
+            'cor' => $request->input('cor'),
+            'cambio' => $request->input('cambio'),
+            'potencia' => $request->input('potencia'),
+            'portas' => $request->input('portas'),
+            'combustivel' => $request->input('combustivel'),
+            'status' => $request->input('status'),
+            'preco' => str_replace(['.', ','], ['', '.'], $request->input('preco')),
+            'info' => $request->input('info'),
+            // 'video' => $request->input('video'),
+        ]);
+        if (!empty($request->foto && $request->foto !== null)) {
+            foreach ($request->foto as $foto) {
+                $path = $foto->store('/images/veiculos', ['disk' =>   'my_files']);
+                Image::create([
+                    'veiculo_id' => $veiculo->id,
+                    'path' => $path
+                ]);
+            }
+        }
+        if (!empty($request->opcionais && $request->opcionais !== null)) {
+            foreach ($request->opcionais as $opcionais) {
+                Opcional::create([
+                    'veiculo_id' => $veiculo->id,
+                    'opcional' => $opcionais
+                ]);
+            }
+        }
+
+        return redirect()->route('cars')->with('success', 'Veiculo cadastrado com sucesso!');
     }
 
     /**
@@ -160,5 +196,15 @@ class CarController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function fotoDelete(Request $request)
+    {
+        
+        if ($request->ajax()) {
+            $foto = Image::find($request->value);
+            $foto->delete();
+            return 'deletado';
+        }
     }
 }
