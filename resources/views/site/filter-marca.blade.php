@@ -16,7 +16,7 @@
                             <div class="product-desc">
                                 <div>
                                     <h4>{{ $veiculo->modelo }} </h4>
-                                    <h6>{{ $veiculo->ano }} - {{ $veiculo->status }} </h6>
+                                    <h6>{{ $veiculo->ano }} - {{ $veiculo->status }} - {{  'R$ '.number_format($veiculo->preco, 2, ',', '.') }} </h6>
                                 </div>
                             </div>
                         </div>

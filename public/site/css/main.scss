@@ -172,7 +172,7 @@ footer {
 
             h4 {
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 1.2em;
                 padding-top: 8px;
             }
 
@@ -480,47 +480,61 @@ footer {
         object-fit: cover;
     }
 }
-.quem-somos-grid{
+
+.quem-somos-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    .img-quem{
+
+    .img-quem {
         width: 100%;
-        img{
+
+        img {
             width: 100%;
         }
     }
-    .texto{
+
+    .texto {
         padding: 30px;
     }
 }
-input{
+
+input {
     background-color: #221f1f !important;
     border: none !important;
     color: #fff !important;
     padding: 1.5em 1em !important;
 }
-textarea{
+
+textarea {
     background-color: #221f1f !important;
     border: none !important;
     color: #fff !important;
     padding: 1.5em 1em !important;
 }
-select{
+
+select {
     background-color: #221f1f !important;
     border: none !important;
     color: #fff !important;
 }
 
-.card-2{
+.card-2 {
     background-color: #221f1f !important;
 }
-.btn-large{
+
+.btn-large {
     background-color: #c71010;
     color: #fff;
     font-weight: 900;
     padding: 15px 5em;
 }
-.btn-large:hover{
+
+.btn-large:hover {
     background-color: #16c710;
 
+}
+
+.telefone {
+    font-size: 1.4em;
+    font-weight: 900;
 }
