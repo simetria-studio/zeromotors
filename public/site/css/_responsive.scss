@@ -152,6 +152,14 @@
     .active {
         display: none;
     }
+
+    .quem-somos-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
 }
 
 @media (min-width: 900px) {

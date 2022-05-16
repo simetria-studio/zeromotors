@@ -186,7 +186,7 @@
                         <div class="text-center">
                             <h5>FOTOS DO VEÍCULO</h5>
                         </div>
-                        <div class="card p-2">
+                        <div class="card p-2 card-2">
                             <div class="form-group col-12 mb-2 required" data-check="foto">
                                 <div class="row">
                                     <div class="col-6 col-md-3 mb-2 preview-foto">
@@ -197,8 +197,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-success">ENVIAR</button>
+                        <div class="my-3 text-center">
+                            <button type="submit" class="btn btn-large">ENVIAR</button>
                         </div>
                     </div>
 

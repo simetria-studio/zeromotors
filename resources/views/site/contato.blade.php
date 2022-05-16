@@ -75,7 +75,9 @@
                         <label for="exampleFormControlTextarea1">Sua mensagem</label>
                         <textarea class="form-control" name="mensagem" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-large">Enviar</button>
+                    </div>
                 </form>
             </div>
         </div>

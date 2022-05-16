@@ -493,3 +493,34 @@ footer {
         padding: 30px;
     }
 }
+input{
+    background-color: #221f1f !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 1.5em 1em !important;
+}
+textarea{
+    background-color: #221f1f !important;
+    border: none !important;
+    color: #fff !important;
+    padding: 1.5em 1em !important;
+}
+select{
+    background-color: #221f1f !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.card-2{
+    background-color: #221f1f !important;
+}
+.btn-large{
+    background-color: #c71010;
+    color: #fff;
+    font-weight: 900;
+    padding: 15px 5em;
+}
+.btn-large:hover{
+    background-color: #16c710;
+
+}

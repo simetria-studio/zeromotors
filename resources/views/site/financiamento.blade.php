@@ -304,8 +304,8 @@
                             <label for="exampleFormControlInput1">Celular (2)</label>
                             <input type="text" class="form-control" name="celular_2"  placeholder="Celular da sua referência" id="whatsapp2">
                         </div>
-                        <div class="my-3">
-                            <button type="submit" class="btn btn-success">ENVIAR</button>
+                        <div class="my-3 text-center">
+                            <button type="submit" class="btn btn-large">ENVIAR</button>
                         </div>
                     </div>
 
