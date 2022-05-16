@@ -30,6 +30,9 @@
     <main>
         @yield('content')
     </main>
+    <div class="whatsapp-float" onclick="whatsappUrl()">
+        <img src="{{ asset('site/img/whatsapp-logo-1.png') }}" alt="">
+    </div>
     <footer>
         <div class="footer">
             <div class="footer-logo">

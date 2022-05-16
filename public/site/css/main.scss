@@ -538,3 +538,12 @@ select {
     font-size: 1.4em;
     font-weight: 900;
 }
+.whatsapp-float{
+    width: 70px;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    img{
+        width: 100%;
+    }
+}
