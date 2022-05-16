@@ -541,6 +541,7 @@ select {
 .whatsapp-float{
     width: 70px;
     position: fixed;
+    z-index: 150;
     bottom: 25px;
     right: 25px;
     img{
