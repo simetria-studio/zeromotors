@@ -480,3 +480,16 @@ footer {
         object-fit: cover;
     }
 }
+.quem-somos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .img-quem{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    .texto{
+        padding: 30px;
+    }
+}

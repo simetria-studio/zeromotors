@@ -83,3 +83,6 @@ Route::post('contato-send', [SiteController::class, 'contatoSend'])->name('conta
 
 Route::get('priceFilter', [SiteController::class, 'filterPrice']);
 Route::post('del', [CarController::class, 'fotoDelete']);
+
+
+Route::get('quem-somos', [SiteController::class, 'quemSomos'])->name('quem.somos');

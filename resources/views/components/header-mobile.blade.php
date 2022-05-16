@@ -32,7 +32,7 @@
                     <a class="nav-link" href="{{ route('financiamento') }}">FINANCIE</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">SOBRE</a>
+                    <a class="nav-link" href="{{ route('quem.somos') }}">SOBRE</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contato') }}">CONTATO</a>

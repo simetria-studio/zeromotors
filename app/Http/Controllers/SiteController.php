@@ -80,6 +80,11 @@ class SiteController extends Controller
         return view('site.financiamento');
     }
 
+    public function quemSomos()
+    {
+        return view('site.quem_somos');
+    }
+
     public function contato()
     {
         return view('site.contato');
